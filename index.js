@@ -29,9 +29,22 @@ function initiateSite() {
       return;
     }
     try {
-      await fetch('https://talo-backend.onrender.com/waitlist', { email }, { method: 'POST', Headers: { 'Content-Type': 'application/json' }})
-      alert("Thank you for submitting your email! If you are selected to participate in the beta, you will receive an email from us.")
+      const options = {
+        method: 'POST',
+        headers: {
+          Accept: 'application.json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email }),
+        cache: 'default'
+      }
+      await fetch('http://localhost:8080/waitlist', options).then(res => {
+        alert("Thank you for submitting your email! If you are selected to participate in the beta, you will receive an email from us.")
+      }).catch(err => {
+        alert("Error occurred while submitting email. Please try again later.")
+      })
     } catch (err) {
+      console.log(err)
       alert("Error occurred while submitting email. Please try again later.")
     }
     emailInput.value = ""  
