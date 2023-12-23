@@ -20,7 +20,7 @@ function initiateSite() {
   aboutMenuLink.addEventListener('click', toggleMenu)
   featuresMenuLink.addEventListener('click', toggleMenu)
   pollMenuLink.addEventListener('click', toggleMenu)
-  waitlistForm.addEventListener('submit', (e) => {
+  waitlistForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = emailInput.value;
     const emailRegex = /\S+@\S+\.\S+/;
@@ -28,10 +28,13 @@ function initiateSite() {
       alert("Please enter a valid email address.")
       return;
     }
-    emailInput.value = ""
-    // TODO: Send email to backend
-    alert("Thank you for submitting your email! If you are selected to participate in the beta, you will receive an email from us.")
-  
+    try {
+      await fetch('https://talo-backend.onrender.com/waitlist', { email }, { method: 'POST', Headers: { 'Content-Type': 'application/json' }})
+      alert("Thank you for submitting your email! If you are selected to participate in the beta, you will receive an email from us.")
+    } catch (err) {
+      alert("Error occurred while submitting email. Please try again later.")
+    }
+    emailInput.value = ""  
   })
 
 
