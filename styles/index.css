@@ -221,6 +221,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+#subscriptions_content > small{
+  font-style: italic;
+  font-size: 15px;
 }
 
 .feature_container {
@@ -287,7 +294,7 @@ td {
 }
 
 .mobile_feature_image {
-  height: 90%;
+  height: 70%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -550,9 +557,13 @@ footer p {
   .about_section_box  {
     padding-left: 0px;
     padding-right: 0px;
-    padding-bottom: 10px;
+    padding-bottom: 1px;
     width: 100%;
   }
+  #subscriptions_content > small{
+    font-size: 10px;
+  }
+
 }
 
 @media (min-width: 600px) {
