@@ -2,7 +2,7 @@ function initiateSite() {
   let screenWidth = window.innerWidth;
   let menuVisible = false;
   
-  const burger = document.querySelector('.burger');
+  const burger = document.querySelector('#burger');
   const menuItems = document.querySelector('.nav-links');
   const aboutMenuLink = document.getElementById("about_link")
   const featuresMenuLink = document.getElementById("features_link")
@@ -54,9 +54,11 @@ function initiateSite() {
   function toggleMenu() {
     if(screenWidth < 600) {
       if(!menuVisible) {
+        burger.style.transform = 'rotate(90deg)';
         menuItems.style.display = 'flex'
         menuVisible = true;
       } else {
+        burger.style.transform = 'rotate(0deg)';
         menuItems.style.display = 'none'
         menuVisible = false;
       }

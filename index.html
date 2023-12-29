@@ -16,7 +16,7 @@
       <li id="features_link"><a href="#features">Features</a></li>
       <li id="poll_link"><a href="#subscriptions">Subscriptions</a></li>
     </ul>
-    <div class="burger">
+    <div id="burger">
       <div class="burger_line"></div>
       <div class="burger_line"></div>
       <div class="burger_line"></div>
@@ -30,13 +30,20 @@
           <p>Talo helps 2nd generation immigrants and mixed culture families stay connected with their cultures through simple daily tasks, social features, and authentic audio stories.</p>
           <form id="home_content_cta_form">
             <input type="email" placeholder="Email" id="home_content_cta_input">
-            <button id="home_content_cta_button">Join Beta</button>
+            <button id="home_content_cta_button">Join Waitlist</button>
           </form>
         </div>
+        <h1 id="title2">Never feel disconnected from your culture again.</h1>
+
         <div id="home_content_right">
-          <img src="./assets/login_screenshot-portrait.png" alt="home_image" id="header_img">
-          <img src="./assets/townhall_screenshot-portrait.png" alt="home_image" id="header_img">
+          <img src="./assets/login_screenshot-portrait.png" alt="home_image" class="header_img" id="header_img_one">
+          <img src="./assets/townhall_screenshot-portrait.png" alt="home_image" class="header_img">
         </div>
+        <p id="subtitle2">Talo helps 2nd generation immigrants and mixed culture families stay connected with their cultures through simple daily tasks, social features, and authentic audio stories.</p>
+        <form id="home_content_cta_form2">
+          <input type="email" placeholder="Email" id="home_content_cta_input">
+          <button id="home_content_cta_button">Join Waitlist</button>
+        </form>
       </div>
     </section>
     <div class="section_header">
@@ -65,19 +72,28 @@
     <section class="features_section" id="features">
       <div class="section_content" id="features_content">
         <div class="feature_container">
-          <h3>Connect</h3>
           <img src="./assets/map2_screenshot-portrait.png" alt="feature_image" class="feature_img">
-          <p>Find and engage with others like you through ethnicity specific feeds, a Snapchat like map, and DMs.</p>
+          <div id="mobile_feature_a" class="mobile_feature_image"></div>
+          <div class="feature_info">
+            <h3>Connect</h3>
+            <p>Find and engage with others like you through ethnicity specific feeds, a Snapchat like map, and DMs.</p>
+          </div>
         </div>
         <div class="feature_container">
-          <h3>Learn</h3>
           <img src="./assets/task_screenshot_2.png" alt="feature_image" class="feature_img">
-          <p>Complete 1 simple task every morning to consistently learn about your culture.</p>
+          <div class="feature_info">
+            <h3>Learn</h3>
+            <p>Complete 1 simple task every morning to consistently learn about your culture.</p>
+          </div>
+          <div id="mobile_feature_b" class="mobile_feature_image"></div>
         </div>
         <div class="feature_container">
-          <h3>Smile</h3>
           <img src="./assets/story_screenshot2-portrait.png" alt="feature_image" class="feature_img">
-          <p>Listen to authentic folktales, myths, and stories of your people through short audio stories. </p>
+          <div id="mobile_feature_c" class="mobile_feature_image"></div>
+          <div class="feature_info">
+            <h3>Smile</h3>
+            <p>Listen to authentic folktales, myths, and stories of your people through short audio stories. </p>
+          </div>
         </div>
       </div>
     </section>
@@ -162,6 +178,11 @@
         </table>
       </div>
     </section>
+    <footer>
+      <p>© 2023 Talo. All rights reserved.</p>
+      <p>Privacy Policy | Terms of Service</p>
+      <p>Contact Info: djustice@taloapp.com</p>
+    </footer>
   </main>
   <script src="./index.js"></script>
 </body>
